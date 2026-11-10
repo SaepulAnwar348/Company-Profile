@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded Squircle Base -->
+  <rect x="5" y="5" width="90" height="90" rx="24" fill="url(#bgGrad)" />
+
+  <!-- Subtle Inner Border -->
+  <rect x="6" y="6" width="88" height="88" rx="23" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+  <!-- Network Interconnection Nodes & Waves -->
+  <!-- WiFi / Wave Arcs -->
+  <path d="M 28 42 A 32 32 0 0 1 72 42" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 35 52 A 22 22 0 0 1 65 52" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 42 62 A 12 12 0 0 1 58 62" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Central Pulse Node -->
+  <circle cx="50" cy="72" r="6" fill="#ffffff" filter="url(#glow)"/>
+  <circle cx="50" cy="72" r="3.5" fill="#2563eb"/>
+
+  <!-- Network Hardware Grid Accents -->
+  <line x1="26" y1="72" x2="38" y2="72" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="72" r="3.5" fill="#38bdf8"/>
+  
+  <line x1="62" y1="72" x2="74" y2="72" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="76" cy="72" r="3.5" fill="#38bdf8"/>
+
+  <line x1="50" y1="26" x2="50" y2="34" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="50" cy="24" r="3.5" fill="#38bdf8"/>
+</svg>
